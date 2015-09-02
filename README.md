@@ -1,5 +1,3 @@
-## TL;DR
-
 数字输入框。
 
 ![效果图](https://g01.alibaba-inc.com/tfscom/TB1tl5JIVXXXXaeXFXXXXXXXXXX.tfsprivatepng_670x670.jpg)
@@ -55,4 +53,4 @@ class Demo extends React.Component {
 
 ## Links 相关链接
 
-- [Fire a bug/Issues 提Bug](http://gitlab.alibaba-inc.com/tinglejs/tingle-number-field/issues)
+- [Fire a bug/Issues 提Bug](http://github.com/tinglejs/tingle-number-field/issues)
