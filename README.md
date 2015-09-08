@@ -1,4 +1,4 @@
-NumberField [![npm version](https://badge.fury.io/js/tingle-number-field.svg)](http://badge.fury.io/js/tingle-number-field)
+# NumberField [![npm version](https://badge.fury.io/js/tingle-number-field.svg)](http://badge.fury.io/js/tingle-number-field)
 
 ![效果图](https://img.alicdn.com/tps/TB1wy6tJpXXXXaVXpXXXXXXXXXX-267-70.png)
 

@@ -7,11 +7,14 @@
     "name": "gnosaij",
     "email": ""
   },
+  "maintainers": [
+    "yize <yize.shc@gmail.com>"
+  ],
   "files": [
     "src",
     "README.md"
   ],
-  "main":"src/index.js",
+  "main": "src/index.js",
   "keywords": [
     "tingle-number-field",
     "number-field",
