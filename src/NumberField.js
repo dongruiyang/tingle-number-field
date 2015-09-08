@@ -82,7 +82,7 @@ NumberField.defaultProps = {
     type:        'text',
     value:       '',
     category:    ''
-}
+};
 
 NumberField.propTypes = {
     className:   React.PropTypes.string,
@@ -96,7 +96,7 @@ NumberField.propTypes = {
     multiLine:   React.PropTypes.bool,
     type:        React.PropTypes.string,
     category:    React.PropTypes.string
-}
+};
 
 NumberField.displayName = 'NumberField';
 

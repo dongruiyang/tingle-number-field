@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-var webpack = require('webpack');
-=======
 var fs = require('fs');
 var webpack = require('webpack');
 
@@ -9,16 +6,15 @@ function getTingleModuleAlias() {
     var alias = {};
 
     // 判断是否存在tingle目录
-    if (!fs.existsSync(__dirname + '/tingle')) return alias;
+    if (!fs.existsSync('./tingle')) return alias;
 
-    var modules = fs.readdirSync(__dirname + '/tingle');
+    var modules = fs.readdirSync('./tingle');
     modules.forEach(function (name) {
-        alias[name] = [__dirname, 'tingle', name, 'src'].join('/');
+        alias[name] = [process.cwd(), 'tingle', name, 'src'].join('/');
     });
     return alias;
 }
 
->>>>>>> ce3809ee621a511544cdd1ed3f77e34598b52106
 module.exports = {
     cache: false,
     entry: {
@@ -32,36 +28,6 @@ module.exports = {
     devtool: '#source-map', // 这个配置要和output.sourceMapFilename一起使用
     module: {
         loaders: [
-<<<<<<< HEAD
-            {test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader?stage=1'}
-        ]
-    },
-    resolve: {
-        alias: (function () {
-            var alias = {};
-            // 按字母排序
-            var components = [
-                'tingle-context',
-                'tingle-dialog',
-                'tingle-group-list',
-                'tingle-layer',
-                'tingle-mask',
-                'tingle-number-field',
-                'tingle-on-off',
-                'tingle-on-off-field',
-                'tingle-select-field',
-                'tingle-slide',
-                'tingle-slot',
-                'tingle-text-field',
-                'tingle-textarea-field',
-                'tingle-tip',
-            ];
-            components.forEach(function (item) {
-                alias[item] = [__dirname, 'tingle', item, 'src'].join('/')
-            });
-            return alias;
-        })()
-=======
             {
                 test: /\.js$/,
                 // tingle以外的modules都不需要经过babel解析
@@ -76,7 +42,6 @@ module.exports = {
     },
     resolve: {
         alias: getTingleModuleAlias()
->>>>>>> ce3809ee621a511544cdd1ed3f77e34598b52106
     },
     externals: {
         react: 'var React' // 相当于把全局的React作为模块的返回 module.exports = React;
