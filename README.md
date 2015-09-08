@@ -1,10 +1,10 @@
-数字输入框。
+NumberField [![npm version](https://badge.fury.io/js/tingle-number-field.svg)](http://badge.fury.io/js/tingle-number-field)
 
-![效果图](https://g01.alibaba-inc.com/tfscom/TB1tl5JIVXXXXaeXFXXXXXXXXXX.tfsprivatepng_670x670.jpg)
+![效果图]()
 
 ## Simple Usage
 
-```
+```js
 class Demo extends React.Component {
 
     constructor(props) {
