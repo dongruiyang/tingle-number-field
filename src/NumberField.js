@@ -1,13 +1,13 @@
 /**
  * NumberField Component for tingle
- * @auther fushan
+ * @author gnosaij
  *
  * Copyright 2014-2015, Tingle Team, Alinw.
  * All rights reserved.
  */
 let classnames = require('classnames');
-let Context    = require('tingle-context');
-let TextField  = require('tingle-text-field');
+let Context = require('tingle-context');
+let TextField = require('tingle-text-field');
 
 let numberRegExp = /^(\d+\.\d*)|(\d+\.)|\d+/;
 
@@ -35,15 +35,15 @@ class NumberField extends React.Component {
 
         let matches = newValue.match(numberRegExp);
         let number = '';
-        if(matches) {
-            number =  matches[0];
+        if (matches) {
+            number = matches[0];
         }
 
         /* by seperator type for output */
         if (this.category === 'number') {
-            return number.replace(/(\d{4})(?=\d)/g,"$1 ");
+            return number.replace(/(\d{4})(?=\d)/g, "$1 ");
         } else if (this.category === 'money') {
-            return number.replace(/(\d{3})(?=\d)/g,"$1,");
+            return number.replace(/(\d{3})(?=\d)/g, "$1,");
         } else {
             return number;
         }
@@ -61,41 +61,43 @@ class NumberField extends React.Component {
         let t = this;
         return (
             <TextField {...t.props}
-             type={"text"}
-             filter={t.numberFilter}
-             onBlur={t.handleBlur.bind(t)}
-             onChange={t.handleChange.bind(t)}/>
+                type={"text"}
+                filter={t.numberFilter}
+                onBlur={t.handleBlur.bind(t)}
+                onChange={t.handleChange.bind(t)}/>
         );
     }
 }
 
 NumberField.defaultProps = {
-    className:   '',
-    filter:      function (v) {return v;},
-    label:       '',
-    onChange:    Context.noop,
-    onFocus:     Context.noop,
-    onBlur:      Context.noop,
+    className: '',
+    filter: function (v) {
+        return v;
+    },
+    label: '',
+    onChange: Context.noop,
+    onFocus: Context.noop,
+    onBlur: Context.noop,
     placeholder: '',
-    readOnly:    false,
-    multiLine:   false,
-    type:        'text',
-    value:       '',
-    category:    ''
+    readOnly: false,
+    multiLine: false,
+    type: 'text',
+    value: '',
+    category: ''
 };
 
 NumberField.propTypes = {
-    className:   React.PropTypes.string,
-    filter:      React.PropTypes.func,
-    label:       React.PropTypes.string,
-    onChange:    React.PropTypes.func,
-    onFocus:     React.PropTypes.func,
-    onBlur:      React.PropTypes.func,
+    className: React.PropTypes.string,
+    filter: React.PropTypes.func,
+    label: React.PropTypes.string,
+    onChange: React.PropTypes.func,
+    onFocus: React.PropTypes.func,
+    onBlur: React.PropTypes.func,
     placeholder: React.PropTypes.string,
-    readOnly:    React.PropTypes.bool,
-    multiLine:   React.PropTypes.bool,
-    type:        React.PropTypes.string,
-    category:    React.PropTypes.string
+    readOnly: React.PropTypes.bool,
+    multiLine: React.PropTypes.bool,
+    type: React.PropTypes.string,
+    category: React.PropTypes.string
 };
 
 NumberField.displayName = 'NumberField';
