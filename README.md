@@ -2,7 +2,7 @@
 
 只能输入数字
 
-<img src="https://img.alicdn.com/tps/TB1f.b6JpXXXXXFXpXXXXXXXXXX-750-1254.png" width="375"/>
+<img src="https://img.alicdn.com/tps/TB13T.aJpXXXXarXXXXXXXXXXXX-750-1254.png" width="375"/>
 
 ## Simple Usage
 
