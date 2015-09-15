@@ -1,7 +1,7 @@
 {
   "name": "tingle-number-field",
   "version": "0.2.0",
-  "description": "tingle-number-field component for tingle.",
+  "description": "只能输入数字的输入框。",
   "repository": "git@github.com/tinglejs/tingle-number-field.git",
   "author": {
     "name": "gnosaij",
@@ -18,7 +18,9 @@
   "keywords": [
     "tingle-number-field",
     "number-field",
-    "tingle"
+    "tingle",
+    "表单",
+    "数字输入"
   ],
   "dependencies": {
     "classnames": "^2.1.2",
