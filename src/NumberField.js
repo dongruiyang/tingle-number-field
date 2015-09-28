@@ -49,19 +49,32 @@ class NumberField extends React.Component {
         }
     }
 
-    handleBlur(newValue) {
-        let cleanedNewValue = newValue.replace(/\.$/, '').replace(/^0*([0-9]+)/, '$1');
-        if (cleanedNewValue !== newValue) {
+    handleBlur(newValue,e) {
+        let cleanedNewValue;
+        if(this.props.type == 'text'){
+            cleanedNewValue = newValue.replace(/\.$/, '').replace(/^0*([0-9]+)/, '$1');
+            if (cleanedNewValue !== newValue) {
+                this.props.onChange(cleanedNewValue);
+            }
+            this.props.onBlur(cleanedNewValue);
+        }else if(this.props.type == 'number'){
+            let numberType =e.target.valueAsNumber
+            if (isNaN(numberType)) {
+                // 输入非数字的话用空格来重写value
+                cleanedNewValue = ' '
+            } else {
+                cleanedNewValue = newValue
+            }
             this.props.onChange(cleanedNewValue);
         }
-        this.props.onBlur(cleanedNewValue);
     }
 
     render() {
         let t = this;
+        // add t.props.type
         return (
             <TextField {...t.props}
-                type={"text"}
+                type={t.props.type}
                 filter={t.numberFilter}
                 onBlur={t.handleBlur.bind(t)}
                 onChange={t.handleChange.bind(t)}/>
@@ -90,6 +103,7 @@ NumberField.propTypes = {
     className: React.PropTypes.string,
     filter: React.PropTypes.func,
     label: React.PropTypes.string,
+    type:React.PropTypes.string,
     onChange: React.PropTypes.func,
     onFocus: React.PropTypes.func,
     onBlur: React.PropTypes.func,

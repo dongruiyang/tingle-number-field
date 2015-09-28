@@ -21,7 +21,7 @@ class Demo extends React.Component {
         return (
             <div>
                 <GroupList title="只能输入有效数字">
-                    <NumberField label="金额" placeholder="请输入"
+                    <NumberField label="金额" type="number" placeholder="请输入"
                         value={t.state.number} category="money"
                         onChange={t.handleNumberChange.bind(t)}/>
                     <NumberField label="身份证" placeholder="请输入"
